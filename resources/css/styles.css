@@ -1,6 +1,6 @@
 *{
 
-   font-size: 'Roboto'; 
+   font-size: 'Roboto';
 }
 
 body{
@@ -9,7 +9,11 @@ body{
     position: relative;
     }
 
+#test{
 
+    background-image: url("background.png");
+
+}
 
 header{
 
@@ -96,7 +100,9 @@ color:#757575;
 
 }
 #search-container{
-    background-image: url("..public/img/apple.png");
+    background-image: #FFFFFF url("img/background.png")no-repeat right top fixed;
+
+
     font-size:36px;
     font-weight: 900;
     background-size:cover;
@@ -105,9 +111,9 @@ color:#757575;
     padding: 50px;
     text-align: center;
     /* back-ground-image: url("../img/banner.jgp");*/
-    
 
-    
+
+
 }
 
 #search-container h1{
@@ -238,9 +244,9 @@ display:flex;
 #col-md-10 offset-md-1 {
     font-size:36px;
     font-weight: 900;
-    
+
     /* Valores globais */
-    
+
     margin-top: initial;
     margin-right:5px;
     text-align: center;
@@ -256,7 +262,7 @@ display:flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-  
+
 
 
 }

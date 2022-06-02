@@ -1,10 +1,10 @@
 @extends('layouts.main')
-@section('title', 'Tião Carreiro')
+@section('title', 'P. Engenharia')
 @section ('content')
 <!DOCTYPE html>
 
 <html>
-    <title> Tião Carreiro</title>
+    <title> P. Pantoja Engenharia</title>
     <body>
 <div id="search-container" class="col-md-12">
 
@@ -28,37 +28,34 @@
 @endif
 
 </div>
-    <p class="subtitle"> Clique aqui e veja os Albúns</p>
+    <p class="subtitle"> Veja os eventos dos próximos dias</p>
 
 
 
 <div id="cards-containder" class="row">
 {{-- It has taking data of database (Column 'title' and description)   --}}
-
- @foreach($event as $event)
+    @foreach($event as $event)
     <div class="card col-md-3">
-    <img src="/img/events/{{$event-> image}}" alt="{{$event-> title}}"/>
+    <img src="/img/events/{{$event-> image}}" alt="{{$event-> title}}"/> 
     <div class="card-body">
     <p class= "card-date">{{date('d/m/y', strtotime($event->date)) }}</p>
-    <h5 class="card-title">  A Matrícula do Albúm:{{$event-> id}} <br>O Título do do Albúm: {{$event ->title}}</h5>
-    {{--<p class="card-participants">{{count($event->users)}} x Participantes</p>--}}
-  {{--  <a href="/events/{{$event->id}}" class="btn btn-primary">Clique para saber mais</a>--}}
+    <h5 class="card-title">  Matrícula:{{$event-> id}} Título do Evento: {{$event ->title}}</h5>
+    <p class="card-participants">{{count($event->users)}} x Participantes</p>
+    <a href="/events/{{$event->id}}" class="btn btn-primary">Clique para saber mais</a>
 
-    <a href="/events/edit/{{$event->id}}" class="btn btn-primary">Clique para saber mais</a>
-
-     {{-- <a>    A descrição do Evento: {{$event -> description}}</a><br>--}}
+      <a>    A descrição do Evento: {{$event -> description}}</a><br>
 </div>
     </div>
           @endforeach
 
      @if(  $search)
 
-    <p>Não foi possivel encontrar nenhum albúm com o título {{$search}}!<a href="/"> Ver todos </a></p>
+    <p>Não foi possivel encontrar nenhum evento com {{$search}}!<a href="/"> Ver todos </a></p>
     @elseif (count([$event])==0 )
     <p> Não existem eventos disponíveis</p>
-    @endif
+    @endif 
 
-    {{--
+    {{-- 
         @if(count([$event])==0 && $search)
 
         @if(count($event)==0)
@@ -66,13 +63,13 @@
 
     @endif
         --}}
-
+    
     <br>
-    <a href="/events/create" classe="nav-link"> Criar Album/Faixas </a><br>
-    <a href="dashboard" classe="nav-link"> Deletar  Album/Faixas </a><br>
-    <a href="dashboard" classe="nav-link"> Atualizar  Album/Faixas </a><br>
-    <a href="/events/showcopy" classe="nav-link"> Ver Todos os  Album/Faixas </a><br>
-    <a href="/events/show" classe="nav-link"> Ver Itens do  Album/Faixas </a><br>
+    <a href="/events/create" classe="nav-link"> Criar Eventos </a><br>
+    <a href="dashboard" classe="nav-link"> Deletar Eventos </a><br>
+    <a href="dashboard" classe="nav-link"> Atualizar Eventos </a><br>
+    <a href="/events/showcopy" classe="nav-link"> Ver Todos os Eventos </a><br>
+    <a href="/events/show" classe="nav-link"> Ver Itens do Evento </a><br>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">

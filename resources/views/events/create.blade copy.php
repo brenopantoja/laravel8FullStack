@@ -1,10 +1,10 @@
 @extends('layouts.main')
-@section('title',  'Criar Album')
+@section('title',  'Criar Evento')
 @section ('content')
 <hmtl>
 <div id="event-create-container" class="col-md-6 offset-md-3">
 
-<h1> Esta é página criar Album </h1>
+<h1> Esta é página criar evento </h1>
 
 <h1> Crie o seu evento </h1>
 <body>
@@ -19,7 +19,7 @@
 
 <div class="form-group">
 
-<label for = "image"> Imagem do Album: </label>
+<label for = "image"> Imagem do Evento: </label>
 {{--   It is be able to creat file in html enctype ="multipart/form-data"   --}}
 <input type = "file" name ="image" id= "image" class = "form-control -file" >
 </div>
@@ -27,15 +27,15 @@
 
 <div class="form-group">
 
-<label for = "title"> Nome do Albúm: </label>
-<input type = "text" class = "form-control" name ="title" id="title" placeholder ="Informe o Nome do Albúm">
+<label for = "title"> Eventos: </label>
+<input type = "text" class = "form-control" name ="title" id="title" placeholder ="Nome do Evento">
 </div>
 
 <br>
 
 <div class="form-group">
 
-<label for = "date"> Data de Criação do Album </label>
+<label for = "date"> Data do Evento </label>
 <input type = "date" class = "form-control" name ="date" id="date" >
 </div>
 
@@ -44,13 +44,12 @@
 
 <div class="form-group">
 
-<label for = "title"> Duração do Album (Em minutos): </label>
-<input type = "text" class = "form-control" name ="duracaoalbum" id="duracaoalbum" placeholder ="Informe duração do Albúm">
-<!--<textarea name= "description" id="description" class="form-control" placeholder="Qual a descrição do Evento"></textarea> -->
+<label for = "title"> Descrição: </label>
+<textarea name= "description" id="description" class="form-control" placeholder="Qual a descrição do Evento"></textarea>
 
 </div>
 
-{{--<div class="form-group">
+<div class="form-group">
     <label for = "title"> Adicione itens de infraestrutura: </label>
 
 <div class="form-group">
@@ -104,7 +103,8 @@
 <label for = "title"> Evento é privado: </label>
 <select name="private" id="private" class="form-control">
 <option value="0"> Não</option>
-<option value="1">Sim </option>--}}
+<option value="1">Sim </option>
+
 </div>
 
 <br>
@@ -112,7 +112,7 @@
 
 <br>
 
-<input type="submit" class="btn btn-primary" value = "Criar Album">
+<input type="submit" class="btn btn-primary" value = "Criar Evento">
 
 </form>
 <br>

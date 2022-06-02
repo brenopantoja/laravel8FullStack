@@ -12,7 +12,7 @@ class EventController extends Controller
     //
      //
      public function index(){
-
+        
         //It has doing the search in Data Base
         $search = request('search');
         if($search){
@@ -27,8 +27,8 @@ class EventController extends Controller
             $event = Event::all();//It has calling all events of database
 
         }
-
-
+        
+        
        // $event = Event::all();//It has calling all events of database
 
         return view ('welcome',['event'=> $event, 'search'=>$search]);// It has sending these parameter
@@ -45,17 +45,17 @@ class EventController extends Controller
 
         public function store( Request $request){
             $event = new Event;
-
+            
             $event -> title =$request->title;
             $event -> date = $request ->date;
-           // $event -> city = $request -> city;
-           // $event-> private = $request ->private;
-            $event -> duracaoalbum = $request -> duracaoalbum;
+            $event -> city = $request -> city;
+            $event-> private = $request ->private;
+            $event -> description = $request -> description;
             //created_at It has taking real time
             $event -> updated_at	= $request -> updated_at	;
             $event -> image = $request -> image;
 
-            //$event->items = $request->items;
+            $event->items = $request->items;
 
             //For It has working with image:
             if($request-> hasfile('image') && $request->file('image')->isValid())
@@ -65,13 +65,13 @@ class EventController extends Controller
                 $extension= $requestImage->extension();
 
                 //It has taking real time and It puts the file MD5
-
+               
                 $imageName = md5($requestImage -> getClientOriginalName().strtotime('now')) . "." .$extension;
-
+               
                     //It has putting in project public_path
                 $requestImage ->move(public_path('img/events'),$imageName);
                 $event-> image = $imageName;//It has saving in Data Base
-            }
+            }   
 
             // It has taking the login user of the data base
             $user= auth()->user();
@@ -81,20 +81,20 @@ class EventController extends Controller
 
             //return redirect ('/');
             // For It has creating msg to user
-            return redirect ('/') -> with('msg', 'Evento criado com sucesso');
+            return redirect ('/') -> with('msg', 'Evento criado com sucesso'); 
         }
 
-
+        
         public function create(){
             return view ('/events.create');
-
+    
         }
 
 /*
             public function show(){
        $events = Event::all();//It has calling all events of database
 
-
+        
 
         //$eventOwer = User:: where ('id', $event -> user_id) -> first()->toArray();
 
@@ -104,7 +104,7 @@ class EventController extends Controller
 */
       public function show($id){
        // $event = Event::all();//It has calling all events of database
-
+        
         $event = Event:: findOrFail($id);//It has taking id of the Data Base exemple array()
         // it has cheking if user already joined some event
         $user = auth()->user();
@@ -152,7 +152,7 @@ class EventController extends Controller
 
             $user->eventsAsParticipant()->attach($id);// It has saving the user at event
 
-
+            
             $event= Event:: findOrFail($id);
 
             return redirect('/dashboard')->with ('mgs', 'Sua presença está confirmada no evento'.$event->title);
@@ -161,30 +161,30 @@ class EventController extends Controller
         }
               public function showAll(){
             $events = Event::all();//It has calling all events of database
-
-
-
+     
+             
+     
              //$eventOwer = User:: where ('id', $event -> user_id) -> first()->toArray();
-
+     
             // return view ('/events.show',['events'=> $events, 'eventOwer'=> $eventOwer]);
-
+     
                  return view ('/events.showcopy', ['event'=> $events]);
-
+                
                 }
-                //It has doing all event's edic
+                //It has doing all event's edic 
                 public function edit($id)
                 {//It has taking data of the data base
-
+                    
                     $user= auth() -> user();
 
-
+                    
                     $event= Event::findOrFail($id);
                     //It has checking if user can use or to see event
                     if($user->id != $event->user_id){
 
                         return redirect('/dashboard');
                     }
-
+        
 
 
                     return view('events.edit', ['event'=>$event]  );
@@ -193,24 +193,24 @@ class EventController extends Controller
                 public function update(Request $request){
                     $data = $request->all();
 
-
+                    
 
 
                     //For It has working with image:
                     if($request-> hasfile('image') && $request->file('image')->isValid())
                     {
                         $requestImage = $request-> image;
-
+        
                         $extension= $requestImage->extension();
-
+        
                         //It has taking real time and It puts the file MD5
-
+                       
                         $imageName = md5($requestImage -> getClientOriginalName().strtotime('now')) . "." .$extension;
-
+                       
                             //It has putting in project public_path
                         $requestImage ->move(public_path('img/events'),$imageName);
                         $data ['image']=$imageName;//It has saving in Data Base
-                    }
+                    }   
                     Event::findOrFail($request->id) ->update($data);
 
 
@@ -221,9 +221,9 @@ class EventController extends Controller
 
                 public function leaveEvent($id){
                     $user = auth()->user();
-                    // It has deleting the link
+                    // It has deleting the link 
                     $user ->eventsAsParticipant()->detach($id);
-
+                    
                     $event= Event::findOrFail($id);
 
                     return redirect('/dashboard')-> with('msg', 'Você saiu com sucesso do evento:' .$event->title);

@@ -15,10 +15,14 @@ return new class extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->id();
+/*            title
+
+            duracaoalbum*/
+
             $table -> string ("title");
-            $table -> string ("city") ;
-            $table -> text("description");
-            $table -> boolean ("private");
+          //  $table -> string ("city") ;
+            $table -> text("duracaoalbum");
+             //$table -> boolean ("private");
 
             $table->timestamps();
         });

@@ -29,17 +29,16 @@
 
 <div class= "form - group"> </div>
 
-<label for = "title"> Edite o Título do Albúm: </label>
+<label for = "title"> Título do Albúm: </label>
 <input type = "text" class = "form-control" name ="title" id="title" placeholder ="Nome do Albúm" value="{{$event->title}}">
 </div>
 <br>
 
 <div class= "form - group"> </div>
 
-<label for = "date"> Data da Criação do Albúm </label>
-<input  type = "date" class = "form-control " name="date" id="date"  value="{{   date('Y-m-d', strtotime($event->date)) }}" >
+<label for = "date"> Data do Albúm </label>
+<input  class = "form-control" name ="date" id="date"  value="{{   date('Y-m-d', strtotime($event->date)) }}" >
 </div>
-
 <br>
 {{--
 
@@ -49,11 +48,11 @@
 
 <div class= "form - group"> </div>
 
-<label for = "title"> Duração do Album (Em minutos): </label>
+<label for = "title"> Duração do Albúm: </label>
 <input type ="text" name= "duracaoalbum" id="duracaoalbum" class="form-control" value="{{$event->duracaoalbum}}"></input>
 
 </div>
-{{--
+
 <div class= "form - group">
     <label for = "title"> Adicione itens de infraestrutura: </label>
 <div class="form-group">
@@ -111,7 +110,7 @@
 </div>
 <br>
 <br>
---}}
+
 <br>
 <input type="submit" class="btn btn-primary" value = " Editar Evento">
 

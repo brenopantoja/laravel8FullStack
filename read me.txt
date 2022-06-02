@@ -1,5 +1,11 @@
 Read me:
+title
 
+Imagem do Album:
+Nome do Albúm:
+Duração do Album (Em minutos):
+
+Faixa (It has lack)
 
 Data Base has creating with name: pengenharia, if case change in file env.
 

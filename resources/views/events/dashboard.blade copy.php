@@ -12,18 +12,14 @@
     <div class= "col-md-10 offset-md-1 dashboard-title-container">
     <div class="row">
 
-
+        @if(count([$event])>=0)
         <table class="table">
             <thead>
                 <tr>
                     <th scop="col">#</th>
                     <th scop="col">Nome do Albúm</th>
                     <th scop="col">Duração </th>
-
-                    <th scop="col">Hora</th>
-
-
-                    <th scop="col">Imagem</th>
+                    <th scop="col">Data</th>
 
                 </tr>
 
@@ -34,10 +30,7 @@
             <tr>
             <td scopt = "row"> {{$loop->index + 1}}</td>
             <td> <a href="/events/{{$event->id}}"> {{$event->title}}</a></td>
-
-            <td>{{$event->duracaoalbum}}</td>
-            <td>{{$event->date}}</td>
-            <td><img src="/img/events/{{$event   -> image}}"/></td>
+            <td>{{count($event->users)}}</td>
 
             <td><a href="/events/edit/{{$event->id}}" class="btn btn-primary"> <ion-icon name="create-outline"></icon-icon>Editar </a> </td>
                 <form action ="/events/{{$event->id}}" method="POST">
@@ -56,12 +49,13 @@
         </tbody>
         </table>
 
-
-        {{--<p> Você não tem eventos <a href="/events/create"> Criar Evento</p>--}}
+        @elseif(count([$event])<=0)
+        <p> Você não tem eventos <a href="/events/create"> Criar Evento</p>
 
         {{-- It has taking data of database (Column 'items') as list form  --}}
 
 
+        @endif
 
     </div>
 
@@ -71,9 +65,9 @@
 
         <div class ="col-md-10 offset-md-1 dashboard-title-container">
 
-               {{-- <h1> Eventos que estou participando: <h1>
+                <h1> Eventos que estou participando: <h1>
 
-
+         @if(count([$eventasparticipant]) > 0)
                 <table class="table">
             <thead>
                 <tr>
@@ -125,10 +119,12 @@
         </tbody>
         </table>
 
-
+        @else
+        <p> Você ainda não está participando de nenhum evento,<a href="/"> Veja todos os Evento</a></p>
+         @endif
     </div>
         <br>
-
+        --}}
 
 
 

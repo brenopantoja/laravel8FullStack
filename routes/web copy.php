@@ -18,7 +18,7 @@ Route::get('/',[HomeController::class, 'index'] );
 */
 //Route:: post ('/events/create', [EventController::class, 'store'])->middleware('auth') ;
 
-Route::get('/', [EventController::class, 'index'])->middleware('auth');
+Route::get('/', [EventController::class, 'index']);
 
 //Command/method middleware has taking login user()
 
