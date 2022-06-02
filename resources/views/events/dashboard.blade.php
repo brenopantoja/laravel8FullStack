@@ -9,7 +9,7 @@
 
 </div>
 
-    <div class= "col-md-10 offset-md-1 dashboard-title-container">
+    <div class= "cards-containder">
     <div class="row">
 
 
@@ -31,7 +31,7 @@
             <tbody>
 
         @foreach($event as  $event)
-            <tr>
+            <tr><div id="card col-md-3">
             <td scopt = "row"> {{$loop->index + 1}}</td>
             <td> <a href="/events/{{$event->id}}"> {{$event->title}}</a></td>
 
@@ -53,7 +53,7 @@
 
                 --}}
         @endforeach
-        </tbody>
+        </tbody></div>
         </table>
 
 

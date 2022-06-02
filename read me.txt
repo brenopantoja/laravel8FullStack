@@ -1,11 +1,15 @@
 Read me:
-title
+title -Nome do Albúm:
 
 Imagem do Album:
-Nome do Albúm:
+
 Duração do Album (Em minutos):
 
 Faixa (It has lack)
+
+Tip: 
+http://www.asbpm.com.br/noticia/manual-de-instalacao-do-git-plug-ins-eclipse-e-visual-studio-code-e-configuracao-de-solucoes
+https://www.devmedia.com.br/codigo-para-background-html-e-css/37206
 
 Data Base has creating with name: pengenharia, if case change in file env.
 

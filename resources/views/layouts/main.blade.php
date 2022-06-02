@@ -4,8 +4,10 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <title> @yield('title')</title>
     <!--<div id="event-create-container" class="col-md-6 offset-md-3"> -->
+    <link= rel="styesheet" href="/css/styles.css">
     <body>
-        <div id="test">
+
+
 
     <h1> Discografia- Tião Carreiro </h1>
 
@@ -59,7 +61,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.rtl.min.css" integrity="sha384-dc2NSrAXbAkjrdm9IYrX10fQq9SDG6Vjz7nQVKdKcJl3pC+k37e7qJR5MVSCS+wR" crossorigin="anonymous">
 
-<link= rel="styesheet" href="/css/styles.css">
 
         </header>    </body>
 
