@@ -28,7 +28,7 @@
 <div class="form-group">
 
 <label for = "title"> Nome do Albúm: </label>
-<input type = "text" class = "form-control" name ="title" id="title" placeholder ="Informe o Nome do Albúm">
+<input textarea = "text" class = "form-control" name ="title" id="title" placeholder ="Informe o Nome do Albúm">
 </div>
 
 <br>
@@ -49,6 +49,15 @@
 <!--<textarea name= "description" id="description" class="form-control" placeholder="Qual a descrição do Evento"></textarea> -->
 
 </div>
+
+<div class="form-group">
+
+<label for = "title"> Duração de cada faixa (Em minutos): </label>
+<!--<input type = "text" class = "form-control" name ="duracaoalbum" id="duracaoalbum" placeholder ="Informe duração do Albúm">-->
+<textarea name= "faixa" id="faixa" class="form-control" placeholder="Informe a faixa e sua duração em minutos"></textarea>
+
+</div>
+
 
 {{--<div class="form-group">
     <label for = "title"> Adicione itens de infraestrutura: </label>

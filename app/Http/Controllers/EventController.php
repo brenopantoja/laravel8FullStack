@@ -51,6 +51,7 @@ class EventController extends Controller
            // $event -> city = $request -> city;
            // $event-> private = $request ->private;
             $event -> duracaoalbum = $request -> duracaoalbum;
+            $event -> faixa = $request ->faixa;
             //created_at It has taking real time
             $event -> updated_at	= $request -> updated_at	;
             $event -> image = $request -> image;

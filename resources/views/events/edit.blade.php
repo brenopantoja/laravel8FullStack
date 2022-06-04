@@ -53,6 +53,14 @@
 <input type ="text" name= "duracaoalbum" id="duracaoalbum" class="form-control" value="{{$event->duracaoalbum}}"></input>
 
 </div>
+
+<label for = "title"> A faixa e  duração (Em minutos): </label>
+{{--<input type ="text" name= "faixa" id="faixa" class="form-control" value="{{$event->faixa}}"></input>--}}
+<input textarea   type ="textarea"name= "faixa" id="faixa" class="form-control" value="{{$event->faixa}}"></textarea>
+
+
+</div>
+
 {{--
 <div class= "form - group">
     <label for = "title"> Adicione itens de infraestrutura: </label>

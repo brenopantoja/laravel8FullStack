@@ -18,8 +18,8 @@
                 <tr>
                     <th scop="col">#</th>
                     <th scop="col">Nome do Albúm</th>
-                    <th scop="col">Duração </th>
-
+                    <th scop="col">Duração total do Albúm </th>
+                    <th scop="col"> Faixas e Duração de cada Faixa </th>
                     <th scop="col">Hora</th>
 
 
@@ -36,6 +36,7 @@
             <td> <a href="/events/{{$event->id}}"> {{$event->title}}</a></td>
 
             <td>{{$event->duracaoalbum}}</td>
+            <td>{{$event->faixa}}</td>
             <td>{{$event->date}}</td>
             <td><img src="/img/events/{{$event   -> image}}"/></td>
 
