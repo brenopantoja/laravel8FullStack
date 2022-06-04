@@ -5,8 +5,9 @@
 <div id="event-create-container" class="col-md-6 offset-md-3">
 
 <h1> Esta é página criar Album </h1>
+<!--<img src="/img/background.png" alt="Banner"> -->
 
-<h1> Crie o seu evento </h1>
+
 <body>
 <header>
 <br>
@@ -125,7 +126,7 @@
 
 </form>
 <br>
-<header>
+</header>
 
 </body>
 

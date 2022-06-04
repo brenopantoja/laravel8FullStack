@@ -33,7 +33,8 @@
         @foreach($event as  $event)
             <tr><div id="card col-md-3">
             <td scopt = "row"> {{$loop->index + 1}}</td>
-            <td> <a href="/events/{{$event->id}}"> {{$event->title}}</a></td>
+            {{--<td> <a href="/events/{{$event->id}}"> {{$event->title}}</a></td>--}}
+            <td>  {{$event->title}}</a></td>
 
             <td>{{$event->duracaoalbum}}</td>
             <td>{{$event->faixa}}</td>

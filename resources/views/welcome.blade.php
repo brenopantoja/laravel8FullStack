@@ -6,6 +6,8 @@
 <html>
     <title> Tião Carreiro</title>
     <body>
+
+
 <div id="search-container" class="col-md-12">
 
 
@@ -17,6 +19,7 @@
 
 
 </form>
+</div>
 <div id="events-container" class="col-md-12">
 @if($search)
 <h2><b> Buscando por: {{$search}}<b></h2>
@@ -51,33 +54,34 @@
     </div>
           @endforeach
 
-     @if(  $search)
+     @if (count([$event])!=0 && $search)
 
-    <p>Não foi possivel encontrar nenhum albúm com o título {{$search}}!<a href="/"> Ver todos </a></p>
+    <p> Foi possivel encontrar um albúm com o título {{$search}}!!!!<a href="/"> Ver todos </a></p>
     @elseif (count([$event])==0 )
-    <p> Não existem eventos disponíveis</p>
+
+    <p> Não existem Albúns disponíveis!!</p>
+
     @endif
 
     {{--
         @if(count([$event])==0 && $search)
 
         @if(count($event)==0)
-    <p><b> Não há evento disponíveis<b></p>
+    <p><b> Não há Albúms disponíveis<b></p>
 
     @endif
         --}}
 
     <br>
-    <a href="/events/create" classe="nav-link"> Criar Album/Faixas </a><br>
-    <a href="dashboard" classe="nav-link"> Deletar  Album/Faixas </a><br>
-    <a href="dashboard" classe="nav-link"> Atualizar  Album/Faixas </a><br>
-    <a href="/events/showcopy" classe="nav-link"> Ver Todos os  Album/Faixas </a><br>
-    <a href="/events/show" classe="nav-link"> Ver Itens do  Album/Faixas </a><br>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
-            <div class ="collapse navbar-collpase" id="navbar">
 
+
+            <div class ="collapse navbar-collpase" id="navbar">
+    </div>
+            </nav>
 </div>
         </header>
 <!-- Comentario em HTML-->

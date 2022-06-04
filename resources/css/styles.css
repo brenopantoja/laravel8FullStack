@@ -7,6 +7,8 @@ body{
     min-height: 100vh;
     padding-bottom: 100px;
     position: relative;
+    background-image: url("img/background.png");
+    background-image: url("/img/background.png")
     }
 
 #test{
@@ -99,15 +101,18 @@ font-size: 14px;
 color:#757575;
 
 }
-#search-container{
-    background-image: #FFFFFF url("img/background.png")no-repeat right top fixed;
+div#search-container{
 
+
+    background-image: #FFFFFF url("../img/background.png");
+
+/* <img src="/img/logo.png" alt="João Carreiro" >*/
 
     font-size:36px;
-    font-weight: 900;
+    font-weight: 600;
     background-size:cover;
     background-position: center;
-    height:400px;
+    height:350px;
     padding: 50px;
     text-align: center;
     /* back-ground-image: url("../img/banner.jgp");*/
@@ -190,7 +195,7 @@ color:#757575;
 
 }
 
-#nav a:hover{
+#navbar a:hover{
     color:#F2A340;
 
 }
