@@ -213,7 +213,7 @@ class EventController extends Controller
                     $user ->eventsAsParticipant()->detach($id);
 
                     $event= Event::findOrFail($id);
-
+                    //It has returning the page dashboard
                     return redirect('/dashboard')-> with('msg', 'Você saiu com sucesso do evento:' .$event->title);
 
 
