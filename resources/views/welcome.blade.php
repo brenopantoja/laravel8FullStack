@@ -8,18 +8,18 @@
     <body>
 
 
-<div id="search-container" class="col-md-12">
+<div class="search-container">
 
 
-    <h1> Busque um Evento:</h1>
+    <h1> Busque um Albúm:</h1>
 
     <form action="/" method="GET">
-    <input type ="text" id="search" name="search" class="Form-control" placeholder="Procure um Evento">
+    <input type ="text" id="search" name="search" class="Form-control" placeholder="Procure um Albúm">
 
 
-
-</form>
 </div>
+</form>
+
 <div id="events-container" class="col-md-12">
 @if($search)
 <h2><b> Buscando por: {{$search}}<b></h2>
@@ -27,7 +27,7 @@
 
 @else
 
-<h1> Próximos Eventos</h1>
+<h1> Albúns:</h1>
 @endif
 
 </div>
@@ -87,7 +87,7 @@
 <!-- Comentario em HTML-->
 
 {{-- Comentario do blade    --}}
-
+</div>
 </body>
 <footer>
 

@@ -13,7 +13,7 @@
     <div class="row">
 
 
-        ,<!--<table class="table"> -->
+        ,<!--<table class="table">  It has working Bootstrap-->
         <table class="table table-striped table-bordered table-condensed table-hover">
 
             <thead>
@@ -40,7 +40,9 @@
 
             <td>{{$event->duracaoalbum}}</td>
             <td>{{$event->faixa}}</td>
-            <td>{{$event->date}}</td>
+           {{-- <td>{{$event->date}}</td>--}}
+            <td>{{$event->created_at}}</td>
+
             <td><img src="/img/events/{{$event   -> image}}"/></td>
 
             <td><a href="/events/edit/{{$event->id}}" class="btn btn-primary"> <ion-icon name="create-outline"></icon-icon>Editar </a> </td>

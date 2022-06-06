@@ -5,13 +5,25 @@
     <title> @yield('title')</title>
     <!--<div id="event-create-container" class="col-md-6 offset-md-3"> -->
     <div id="search-container" class="col-md-12" >
-    <img src="/img/background.png" alt="João Carreiro" style="float:right;width:200px">
+  <!--  <img src="/img/background.png" alt="João Carreiro" style="float:right;width:200px"> -->
+<style>
+    body{
+
+background-image: url("/img/background.png");
+background-repeat: no-repeat;
+background-attachment: fixed;
+ /*width: 50px;/* Faz a largura ficar igual a da largura da imagem de exemplo */
+/*height: 50px;/* Faz a altura ficar igual a da altura da imagem de exemplo */
+}
+</style>
 
     {{-- CSS --}}
     <script> src="/js/script.js"</script>
     <link= rel="styesheet" href="/resources/css/styles.css">
 
-    <body>
+   <!-- <body background="/img/background.png " background-repeat no-repeat> -->
+
+<body>
 
 
 
