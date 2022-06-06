@@ -28,11 +28,6 @@ Route:: get ('/events/create', [EventController::class, 'create']) ->middleware(
 
 Route:: post ('/event', [EventController::class, 'store']) ->middleware('auth');
 
-Route:: get ('/events/showcopy', [EventController::class, 'showAll']) ->middleware('auth');
-
-
-
-Route:: get ('/events/show', [EventController::class, 'show'] )->middleware('auth') ;
 
 
 Route:: get ('/events/{id}', [EventController::class, 'show'] )->middleware('auth') ;
@@ -47,25 +42,10 @@ Route:: get('/events/edit/{id}',[EventController::class,'edit'])->middleware('au
 Route:: put('events/update/{id}',[EventController::class,'update']) ->middleware('auth');
 
 
-Route:: post('events/join/{id}',[EventController::class,'joinEvent']) ->middleware('auth');
-
 //It has deleting events
 Route:: delete('events/leave/{id}',[EventController::class,'leaveEvent']) ->middleware('auth');
 
 
-/*
-Route:: get ('/produtos_teste/{id}', function($id=null)  {
-    return view ('product', ['id' => $id]);
-
-    });
-
-
-//Route:: get ('/events/{id}', [EventController::class, 'show'] ) ;
-
-//Route:: get ('/events/show ', [EventController::class, 'show']) ;//It has working
-
-
-//Route::get('/', function () {
     /*
 
     $nome = "Breno";
@@ -81,31 +61,10 @@ Route:: get ('/produtos_teste/{id}', function($id=null)  {
         'nomes'=> $nomes
     ]);
 
-    //return view('welcome', ['nome' => $nome, 'idade' => $idade];
+
 });
 */
 
-Route:: get ('/contact', function()  {
-
-return view ('contact');
-
-});
-
-Route:: get ('/produtos', function()  {
-
-$busca = request ('search');
-
-
-    return view ('products', ['busca' => $busca]);
-
-    });
-
-
-//Route:: get ('/produtos_teste/{id}', function($id)  {
-Route:: get ('/produtos_teste/{id}', function($id=null)  {
-        return view ('product', ['id' => $id]);
-
-        });
         /*It is login, log of route: It has creatting throught comamand: node and wire, it needs to install node.js https://nodejs.org/pt-br/download/
 
 //It has checking migrate, the tables

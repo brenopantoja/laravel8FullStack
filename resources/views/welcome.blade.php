@@ -44,7 +44,6 @@
     <div class="card-body">
     <p class= "card-date">{{date('d/m/y', strtotime($event->date)) }}</p>
     <h5 class="card-title">  A Matrícula do Albúm:{{$event-> id}} <br>O Título do do Albúm: {{$event ->title}}</h5>
-    {{--<p class="card-participants">{{count($event->users)}} x Participantes</p>--}}
   {{--  <a href="/events/{{$event->id}}" class="btn btn-primary">Clique para saber mais</a>--}}
 
     <a href="/events/edit/{{$event->id}}" class="btn btn-primary">Clique para saber mais</a>

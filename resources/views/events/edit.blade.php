@@ -61,67 +61,8 @@
 
 </div>
 
-{{--
-<div class= "form - group">
-    <label for = "title"> Adicione itens de infraestrutura: </label>
-<div class="form-group">
-    <input type="checkbox" name="items[]" id="items[]" value="Cadeiras"> Cadeiras
-</div>
-
-
 <br>
-
-<div class= "form - group">
-    <input type="checkbox" name="items[]"  id="items[]" value="Palco"> Palco
-</div>
-
-
-<br>
-
-<div class="form-group">
-    <input type="checkbox" name="items[]"  id="items[]" value="Cerveja Gratis"> Cervejas Grátis
-</div>
-
-
-<br>
-
-<div class= "form-group">
-
-    <input type="checkbox" name="items[]"  id="items[]" value="Open Bar" > Open Bar
-</div>
-
-
-<br>
-
-
-<div class= "form-group">
-    <input type="checkbox" name="items[]"  id="items[]" value="Brides"> Brindes
-</div>
-
-</div>
-<br>
-
-
-
-<div class= "form - group"> </div>
-<label for = "title"> Cidade: </label>
-<input type = "text" class = "form-control" name ="city" id="city" placeholder ="Nome da cidade" value="{{$event->city}}">
-</div>
-<br>
-
-<div class= "form - group"> </div>
-
-<label for = "title"> Evento é privado: </label>
-<select name="private" id="private" class="form-control" value="{{$event->private}}">
-<option value="0"> Não</option>
-<option value="1"{{$event->private == 1? "selected='select'" : ""}}> Sim  </option>
-
-</div>
-<br>
-<br>
---}}
-<br>
-<input type="submit" class="btn btn-primary" value = " Editar Evento">
+<input type="submit" class="btn btn-primary" value = " Editar Album">
 
 </form>
 <br>

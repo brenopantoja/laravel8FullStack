@@ -1,20 +1,13 @@
 Read me:
-title -Nome do Albúm:
 
-Imagem do Album:
-
-Duração do Album (Em minutos):
-
-Faixa (It has lack)
-
+It is a system made in Laravel Framework be able of managing music albums.
 
 Data Base has creating with name: pengenharia, if case change in file env.
 
-The system has all, login password and, it is able user to create a account.
+The system has all, login password and, it is able user to create a account (liveware).
 
-Also It has Creation, Read, Update, Delete (CRUD) tables and with join between them.
+Also It has Creation, Read, Update, Delete (CRUD) tables and with join between them and bootstrap.
 
-It is a system of events.
 
 Downloads: It does download of the Xampp, MySQL and of the Visual Studio Core.
 

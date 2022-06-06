@@ -42,6 +42,7 @@ background-attachment: fixed;
     @endguest
 
 
+
         <lu class="nav-item">
         <a href="/dashboard" class="nav-link"> Meus Albúns </a>
     </lu>
@@ -53,6 +54,8 @@ background-attachment: fixed;
             <a href="/" class="nav-link"> Ir para Página Inicial</a>
 
         </ul>
+
+
 
     {{-- Auth login --}}
     @auth<!--
@@ -84,15 +87,6 @@ background-attachment: fixed;
 
 
 
-             @guest
-    <lu class="nav-item">
-        <a href="/login" class="nav-link"> Entrar </a>
-    </lu>
-
-    <lu class="nav-item">
-        <a href="/register" class="nav-link"> Cadastrar </a>
-    </lu>
-    @endguest
 
 
 </div>

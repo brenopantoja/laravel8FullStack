@@ -89,18 +89,7 @@ class EventController extends Controller
 
         }
 
-/*
-            public function show(){
-       $events = Event::all();//It has calling all events of database
 
-
-
-        //$eventOwer = User:: where ('id', $event -> user_id) -> first()->toArray();
-
-        return view ('/events.show',['events'=> $events, 'eventOwer'=> $eventOwer]);
-
-            return view ('/events.show');
-*/
       public function show($id){
        // $event = Event::all();//It has calling all events of database
 
