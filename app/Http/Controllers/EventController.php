@@ -48,15 +48,13 @@ class EventController extends Controller
 
             $event -> title =$request->title;
             $event -> date = $request ->date;
-           // $event -> city = $request -> city;
-           // $event-> private = $request ->private;
+
             $event -> duracaoalbum = $request -> duracaoalbum;
             $event -> faixa = $request ->faixa;
             //created_at It has taking real time
             $event -> updated_at	= $request -> updated_at	;
             $event -> image = $request -> image;
 
-            //$event->items = $request->items;
 
             //For It has working with image:
             if($request-> hasfile('image') && $request->file('image')->isValid())

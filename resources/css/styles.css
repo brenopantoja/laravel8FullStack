@@ -12,11 +12,7 @@ body{
     background-position: 200px 70px;
     }
 
-#test{
 
-    background-image: url("img/background.png");
-
-}
 
 header{
 
@@ -109,7 +105,6 @@ color:#757575;
 
     /*background-image:  ("../img/background.png");*/
 
-/* <img src="/img/logo.png" alt="João Carreiro" >*/
 
     font-size:36px;
     font-weight: 600;
@@ -118,7 +113,6 @@ color:#757575;
     height:350px;
     padding: 50px;
     text-align: center;
-    /* back-ground-image: url("../img/banner.jgp");*/
 
 
 

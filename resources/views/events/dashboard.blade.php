@@ -77,54 +77,12 @@
 
         <div class ="col-md-10 offset-md-1 dashboard-title-container">
 
-               {{-- <h1> Eventos que estou participando: <h1>
-
-
-                <table class="table">
-            <thead>
-                <tr>
-                    <th scop="col">#</th>
-                    <th scop="col">Nome do Albúm</th>
-                    <th scop="col">Duração do Albúm</th>
-                    <th scop="col">Data</th>
-
-                </tr>
-
-            </thead>
-            <tbody>
-
-        @foreach($eventasparticipant as  $event)
-            <tr>
-
-
-            <td scopt = "row"> {{$loop->index + 1}}</td>
-            <td> <a href="/events/{{$event->id}}"> {{$event->title}}</a></td>
-            <td>{{count($event->users)}}</td>
-            <td>
-            <form action= "/events/leave/{{$event->id}}" method="POST">
-            @csrf
-
-            @method("DELETE")
-            <button type="submit" class= "btn btn-danger delete-btn">
-            <ion-icon name="trash-outline"> Sair do Eventos</ion-icon>
-            </button>
-
-          </form>
-            <td>
-
-            </td>
-            </tr>
-
-        @endforeach
 
         {{--
 
-            {{print_r($eventasparticipant->title)}}
+            {{print_r($event->title)}}
 
 
-            @foreach([$event->items] as [$item])
-
-            @foreach($event->items as $event-> items)
 
             --}}
 
@@ -138,7 +96,6 @@
 
 
 
-    <a href="/events/showcopy" classe="nav-link"> Ver todas as Informações Cadastradas </a><br>
 
     <a href="/" classe="nav-link"> Voltar para Página Inicial</a><br>
 
