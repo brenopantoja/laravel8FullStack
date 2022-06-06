@@ -13,7 +13,7 @@
     <div class="row">
 
 
-        ,<!--<table class="table">  It has working Bootstrap-->
+        <!--<table class="table">  It has working Bootstrap-->
         <table class="table table-striped table-bordered table-condensed table-hover">
 
             <thead>
