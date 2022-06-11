@@ -1,10 +1,10 @@
 @extends('layouts.main')
-@section('title',  'Editando: '.$event->title)
+@section('title',  'Editando: '.$event->nome)
 @section('content')
 
 <div id="event-create-container" class="col-md-6 offset-md-3">
 
-<h1> Editando: {{$event->title}}</h1>
+<h1> Editando: {{$event->nome}}</h1>
 
 <h1> Edite o seu Produto </h1>
 <br>
@@ -47,6 +47,12 @@
 
     'date_format:d/m/Y'--}}
 
+    <div>
+<label for = "title"> Descrição do produto </label>
+{{--<input type ="text" name= "faixa" id="faixa" class="form-control" value="{{$event->faixa}}"></input>--}}
+<input type="textarea"   type ="textarea" name= "descricao" id="descricao" class="form-control" value="{{$event->descricao}}"></textarea>
+
+
 <div class= "form - group"> </div>
 
 <label for = "tensao"> Tensão Elétrica do Produto </label>
@@ -54,9 +60,10 @@
 
 </div>
 
+<div>
 <label for = "title"> Marca do Produto </label>
 {{--<input type ="text" name= "faixa" id="faixa" class="form-control" value="{{$event->faixa}}"></input>--}}
-<input textarea   type ="textarea"name= "marca" id="marca" class="form-control" value="{{$event->marca}}"></textarea>
+<input type="textarea"   type ="textarea" name= "marca" id="marca" class="form-control" value="{{$event->marca}}"></textarea>
 
 
 </div>
@@ -68,6 +75,5 @@
 <br>
 
 @yield ('content')
-<a href="/"> Voltar para Home</a>
-</div>
+
 @endsection
