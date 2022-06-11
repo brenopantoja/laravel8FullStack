@@ -45,12 +45,18 @@ class EventController extends Controller
 
         public function store( Request $request){
             $event = new Event;
+                /*
+            $table -> string ("nome");
+            $table -> string ("descricao") ;
+            $table -> string("tensao ");
+            $table -> string("marca ");*/
+            $event -> nome =$request->nome;
 
-            $event -> title =$request->title;
+            $event -> descricao = $request -> descricao;
+            $event -> tensao = $request ->tensao;
+            $event -> marca = $request ->marca;
             $event -> date = $request ->date;
 
-            $event -> duracaoalbum = $request -> duracaoalbum;
-            $event -> faixa = $request ->faixa;
             //created_at It has taking real time
             $event -> updated_at	= $request -> updated_at	;
             $event -> image = $request -> image;

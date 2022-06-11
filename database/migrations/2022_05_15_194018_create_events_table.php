@@ -17,12 +17,18 @@ return new class extends Migration
             $table->id();
 /*            title
 
-            duracaoalbum*/
+            duracaoalbum
 
             $table -> string ("title");
           //  $table -> string ("city") ;
             $table -> text("duracaoalbum");
              //$table -> boolean ("private");
+*/              // Registro Eletrodometico*/
+
+                $table -> string ("nome");
+                $table -> string ("descricao") ;
+                $table -> string("tensao");
+                $table -> string("marca");
 
             $table->timestamps();
         });

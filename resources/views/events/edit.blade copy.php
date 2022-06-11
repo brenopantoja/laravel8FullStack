@@ -6,7 +6,7 @@
 
 <h1> Editando: {{$event->title}}</h1>
 
-<h1> Edite o seu Produto </h1>
+<h1> Crie o seu evento </h1>
 <br>
 @if(session ('msg'))
 <p class ="msg">{{session('msg')}}</p>
@@ -18,7 +18,7 @@
 
 <div class= "form - group">
 <br>
-<label for = "image"> Imagem do Produto: </label>
+<label for = "image"> Imagem do Evento: </label>
 {{--   It is be able to creat file in html enctype ="multipart/form-data"   --}}
 
 <input type = "file" name ="image" id= "image" class = "form-control -file" ></input>
@@ -29,14 +29,14 @@
 
 <div class= "form - group"> </div>
 
-<label for = "title"> Edite o Título do seu Produto: </label>
-<input type = "text" class = "form-control" name ="nome" id="nome" placeholder ="Nome do Produto" value="{{$event->nome}}">
+<label for = "title"> Edite o Título do Albúm: </label>
+<input type = "text" class = "form-control" name ="title" id="title" placeholder ="Nome do Albúm" value="{{$event->title}}">
 </div>
 <br>
 
 <div class= "form - group"> </div>
 
-<label for = "date"> Data da Criação do Produto </label>
+<label for = "date"> Data da Criação do Albúm </label>
 <input  type = "date" class = "form-control " name="date" id="date"  value="{{   date('Y-m-d', strtotime($event->date)) }}" >
 </div>
 
@@ -49,20 +49,20 @@
 
 <div class= "form - group"> </div>
 
-<label for = "tensao"> Tensão Elétrica do Produto </label>
-<input type ="text" name= "tensao" id="tensao" class="form-control" value="{{$event->tensao}}"></input>
+<label for = "title"> Duração do Album (Em minutos): </label>
+<input type ="text" name= "duracaoalbum" id="duracaoalbum" class="form-control" value="{{$event->duracaoalbum}}"></input>
 
 </div>
 
-<label for = "title"> Marca do Produto </label>
+<label for = "title"> A faixa e  duração (Em minutos): </label>
 {{--<input type ="text" name= "faixa" id="faixa" class="form-control" value="{{$event->faixa}}"></input>--}}
-<input textarea   type ="textarea"name= "marca" id="marca" class="form-control" value="{{$event->marca}}"></textarea>
+<input textarea   type ="textarea"name= "faixa" id="faixa" class="form-control" value="{{$event->faixa}}"></textarea>
 
 
 </div>
 
 <br>
-<input type="submit" class="btn btn-primary" value = " Editar Produto">
+<input type="submit" class="btn btn-primary" value = " Editar Album">
 
 </form>
 <br>

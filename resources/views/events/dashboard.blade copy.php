@@ -45,12 +45,11 @@
         @foreach($event as  $event)
             <tr><div id="card col-md-3">
             <td scopt = "row"> {{$loop->index + 1}}</td>
-            {{--<td> <a href="/events/{{$event->id}}"> {{$event->nome}}</a></td>--}}
-            <td>  {{$event->nome}}</a></td>
-            <td>  {{$event->descricao}}</a></td>
+            {{--<td> <a href="/events/{{$event->id}}"> {{$event->title}}</a></td>--}}
+            <td>  {{$event->title}}</a></td>
 
-            <td>{{$event->tensao}}</td>
-            <td>{{$event->marca}}</td>
+            <td>{{$event->duracaoalbum}}</td>
+            <td>{{$event->faixa}}</td>
            {{-- <td>{{$event->date}}</td>--}}
             <td>{{$event->created_at}}</td>
 
@@ -108,7 +107,6 @@
 
 
 
-    <a href="/" classe="nav-link"> Voltar para Página Inicial</a><br>
 
     {{-- It has taking data of database (Column 'title' and description)   --}}
 

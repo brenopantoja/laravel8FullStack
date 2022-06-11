@@ -8,7 +8,7 @@
 <style>
     body{
 
-background-image: url("/img/background.png");
+/*background-image: url("/img/background.png");*/
 background-repeat: no-repeat;
 background-attachment: fixed;
 
@@ -24,12 +24,12 @@ background-attachment: fixed;
 
 
 
-    <h1> Discografia- Tião Carreiro </h1>
+    <h1> Produtos </h1>
     <nav class="navbar navbar-expand navbar-light">
 
 <div class= "collapse navbar-collapse"  id="navbar">
     <a href="" class="navbar-brand">
-<img src="/img/logo.png" alt="João Carreiro" >
+<!--<img src="/img/logo.png" alt="João Carreiro" -->
     </a>
     @guest
     <lu class="nav-item">
@@ -44,10 +44,10 @@ background-attachment: fixed;
 
 
         <lu class="nav-item">
-        <a href="/dashboard" class="nav-link"> Meus Albúns </a>
+        <a href="/dashboard" class="nav-link"> Meus Produtos </a>
     </lu>
     <ul class= "nav-item">
-            <a href="/events/create" class="nav-link"> Criar Albúm</a>
+            <a href="/events/create" class="nav-link"> Criar Produto</a>
 
         </ul>
         <ul class= "nav-item">
@@ -119,10 +119,12 @@ background-attachment: fixed;
 
 
 <footer>
-<p> Tião Cerreiro LDTA &copy; 2022</p>
+<p> P. Engenharia LDTA &copy; 2022</p>
 </footer>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <!--<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> -->
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<a href="/" classe="nav-link"> Voltar para Página Inicial</a><br>
+
 
 </html>
