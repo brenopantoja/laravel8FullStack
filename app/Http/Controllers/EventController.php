@@ -37,7 +37,7 @@ class EventController extends Controller
      public function destroy($id)
      {
         Event:: findOrFail($id)-> delete();//It has deleting by the primary code
-        session()->flash('msg', '  Produto Excluído com atualizados com sucesso !!');
+        session()->flash('msg', ' Produto Excluído com  com sucesso !!');
 
         return redirect('/dashboard');
 
@@ -104,39 +104,6 @@ class EventController extends Controller
 
         }
 
-/*
-      public function show($id){
-       // $event = Event::all();//It has calling all events of database
-
-        $event = Event:: findOrFail($id);//It has taking id of the Data Base exemple array()
-        // it has cheking if user already joined some event
-        $user = auth()->user();
-
-        $hasUserJoined = false;
-        if($user)
-        {// It has taking all array user
-            $userEvents = $user-> eventsAsParticipant->toArray();
-
-            foreach ($userEvents as $userEvent){
-                if($userEvent['id']== $id){// This id is of the event
-                    $hasUserJoined = true;
-
-
-                }
-
-            }
-        }
-
-
-
-        //It has finding  user first that can be find
-        $eventOwer = User::where ('id', $event->user_id) -> first()->toArray(); //It has transforming object in array
-        //return view('events.show',['event'=> $event]);
-        return view('events.show',['event'=> $event, 'eventOwer'=>$eventOwer, 'hasUserJoined' => $hasUserJoined]);
-
-
-        }
-*/
         public function dashboard(){
 
             $user = auth()->user();
