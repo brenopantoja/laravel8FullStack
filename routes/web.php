@@ -24,19 +24,22 @@ Route::get('/', [EventController::class, 'index'])->middleware('auth');
 
 //
 
+//It has creating products
 Route:: get ('/events/create', [EventController::class, 'create']) ->middleware('auth');
-
+//It has creating products
 Route:: post ('/event', [EventController::class, 'store']) ->middleware('auth');
 
-
 Route:: get('dashboard',[EventController::class,'dashboard'])->middleware('auth') ;
-
+//It has delete products
 Route:: delete ('/events/{id}', [EventController::class, 'destroy'])->middleware('auth') ;
 
 Route:: get('/events/edit/{id}',[EventController::class,'edit'])->middleware('auth');
-//It has updating data base
 
+//It has updating data base
 Route:: put('events/update/{id}',[EventController::class,'update']) ->middleware('auth');
+
+//It has showupdatinging products of the user
+Route:: get ('/events/{id}', [EventController::class, 'show'] )->middleware('auth') ;
 
 /* Somes tips:
 
