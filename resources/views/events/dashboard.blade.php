@@ -23,7 +23,7 @@
             <thead>
                 <tr>
 
-<th scop="col">#</th>
+                    <th scop="col">#</th>
                     <th scop="col">Nome</th>
                     <th scop="col">Descrição </th>
                     <th scop="col"> Tensão </th>
@@ -42,11 +42,9 @@
             {{--<td> <a href="/events/{{$event->id}}"> {{$event->nome}}</a></td>--}}
             <td>  {{$event->nome}}</a></td>
             <td>  {{$event->descricao}}</a></td>
-
             <td>{{$event->tensao}}</td>
             <td>{{$event->marca}}</td>
            {{-- <td>{{$event->date}}</td>--}}
-            {{--<td>{{$event->created_at}}</td>--}}
         <td>   {{ date('Y-m-d', strtotime($event->created_at))}}</td>
             <td><img src="/img/events/{{$event   -> image}} " width= "150" heigth= "100"/></td>
 
@@ -100,13 +98,7 @@
 
 
 
-
-
-
     {{-- It has taking data of database (Column 'title' and description)   --}}
-
-
-
 
 
 <!-- Comentario em HTML-->

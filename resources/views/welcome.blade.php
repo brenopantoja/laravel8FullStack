@@ -15,10 +15,10 @@
 <div class="search-container">
 
 
-    <h1> Busque um Albúm:</h1>
+    <h1> Busque um Produto:</h1>
 
     <form action="/" method="GET">
-    <input type ="text" id="search" name="search" class="Form-control" placeholder="Procure um Albúm">
+    <input type ="text" id="search" name="search" class="Form-control" placeholder="Procure um Produto">
 
 
 </div>
@@ -31,7 +31,7 @@
 
 @else
 
-<h1> Produtos:</h1>
+<h1> Produtos disponíveis:</h1>
 @endif
 
 </div>

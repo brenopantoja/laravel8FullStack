@@ -44,19 +44,12 @@
 @endif
 
 <form action ="/event" method ="POST" enctype ="multipart/form-data" name="form1"  class="form-horizontal validate-form">
-<!--<form action ="/event" method ="POST" enctype ="multipart/form-data" name="form1" id="form1"><form action ="/event" method ="POST" enctype ="multipart/form-data" name="form1" id="form1">-->
+
 @csrf {{--  diretive of the Laravel   --}}
-
-
 <label for = "nome"> Nome do Produto: </label>
-<!--<input input = "text" class = "form-control " name ="nome" id="nome" placeholder ="Informe o Nome do Produto">-->
+
 <input input = "text"  name ="nome" id="nome" value="{{ old('nome') }}" placeholder ="Informe o Nome do Produto" class = "form-control  ">
-<!--<input textarea = "text" class = "form-control @if($errors->has('nome'))is-invalid @endif" name ="nome" id="nome" placeholder ="Informe o Nome do Produto">
-
-<input id="title" type="text" class="form-control" name="title" value="{{ old('title') }}"/>
--->
 </div>
-
 <br>
 
 <div class="form-group">
@@ -74,7 +67,7 @@
 <div class="form-group">
 
 <label for = "date"> Data obtenção do Produto: </label>
-<input type = "date" class = "form-control" name ="date" id="date" >
+<input type = "date" class = "form-control" name ="date" id="date" value="{{old('date')}}" >
 </div>
 
 <br>
@@ -83,11 +76,11 @@
 <div class="form-group">
 
 <label for = "descricao"> Descrição do Produto: </label>
-<textarea name= "descricao" id="descricao" class="form-control" placeholder="Informe a Descrição do produto"></textarea>
+<textarea name= "descricao" id="descricao"value="{{old('descricao')}}" class="form-control" placeholder="Informe a Descrição do produto"></textarea>
 
 
 </div>
-<!--<textarea name= "description" id="description" class="form-control" placeholder="Qual a descrição do Evento"></textarea> -->
+
 
 <div class="form-group">
 
@@ -101,7 +94,7 @@
 
 <label for = "marca"> Informe a marca do Produto: </label>
 
-<!--<input type= "text" id="marca" class="form-control" placeholder="Informe a marca do produto"> -->
+
 <input type = "text" class = "form-control" name ="marca" id="marca" placeholder ="Informe a marca do produto">
 </div>
 

@@ -13,10 +13,10 @@ use App\Http\Controllers\EventController;
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
-Route::get('/',[HomeController::class, 'index'] );
+
 |
 */
-//Route:: post ('/events/create', [EventController::class, 'store'])->middleware('auth') ;
+
 
 Route::get('/', [EventController::class, 'index'])->middleware('auth');
 
@@ -29,9 +29,6 @@ Route:: get ('/events/create', [EventController::class, 'create']) ->middleware(
 Route:: post ('/event', [EventController::class, 'store']) ->middleware('auth');
 
 
-
-Route:: get ('/events/{id}', [EventController::class, 'show'] )->middleware('auth') ;
-
 Route:: get('dashboard',[EventController::class,'dashboard'])->middleware('auth') ;
 
 Route:: delete ('/events/{id}', [EventController::class, 'destroy'])->middleware('auth') ;
@@ -41,26 +38,8 @@ Route:: get('/events/edit/{id}',[EventController::class,'edit'])->middleware('au
 
 Route:: put('events/update/{id}',[EventController::class,'update']) ->middleware('auth');
 
+/* Somes tips:
 
-
-    /*
-
-    $nome = "Breno";
-    $idade = 36;
-    $vetor =  [1,2,3,5,6];
-    $nomes = ["Ramos", "Sousa", "Maria"];
-
-    return view(
-        'welcome', ['nome' => $nome,
-        'idade' => $idade,
-        'profissao' => "Engenheiro",
-        'vetor' =>$vetor,
-        'nomes'=> $nomes
-    ]);
-
-
-});
-*/
 
         /*It is login, log of route: It has creatting throught comamand: node and wire, it needs to install node.js https://nodejs.org/pt-br/download/
 

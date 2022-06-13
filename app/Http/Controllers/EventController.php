@@ -29,8 +29,6 @@ class EventController extends Controller
         }
 
 
-       // $event = Event::all();//It has calling all events of database
-
         return view ('welcome',['event'=> $event, 'search'=>$search]);// It has sending these parameter
 
      }
@@ -42,35 +40,16 @@ class EventController extends Controller
         session()->flash('msg', '  Produto Excluído com atualizados com sucesso !!');
 
         return redirect('/dashboard');
-       // return redirect('/dashboard')-> with ('msg', 'Evento excluido com sucesso');
+
 
      }
 
-
-       // public function store( StoreUserResquest $request2,Request $request ){
-
             public function store( Request $request){
-                /*
-            $request->validate([
-                'nome' => 'required|unique:event|max:255',
-                'descricao'=> 'required|unique:event|max:255 ',
-                'tensao'=> 'required|unique:event|max:255 ',
-                'marca'=> 'required|unique:event|max:255 ',
-                          'date' => 'nullable|date',
-
-            ]);*/
             $event = new Event;
-            /*
-            $table -> string ("nome");
-            $table -> string ("descricao") ;
-            $table -> string("tensao ");
-            $table -> string("marca ");*/
+
             $event -> nome =$request->nome;
-
             $event -> descricao = $request -> descricao;
-
             $event -> tensao = $request ->tensao;
-
             $event -> marca = $request ->marca;
             $event -> date = $request ->date;
 
@@ -95,35 +74,27 @@ class EventController extends Controller
                 $event-> image = $imageName;//It has saving in Data Base
             }
 
+
             // It has taking the login user of the data base
             $user= auth()->user();
             $event-> user_id = $user->id;
-            $event -> save();
-            /*
             $request->validate([
-                'nome' => 'required|unique:event|max:255',
-                'descricao'=> 'required|unique:event|max:255 ',
-                'tensao'=> 'required|unique:event|max:255 ',
-                'marca'=> 'required|unique:event|max:255 ',
+                'nome' => 'required',
+                'descricao'=> 'required ',
+                'tensao'=> 'required',
+                'marca'=> 'required',
                           'date' => 'nullable|date',
 
             ]);
 
 
-*/
 
-            //return redirect ('/');
-            //Event::create(['nome' => $nome, 'descricao' => $descricao,'tensao' => $tensao, 'marca' =>$marca, 'image'=> $image]);
-            // For It has creating msg to user
+            $event -> save();
+           // For It has creating msg to user
 
             session()->flash('msg', 'Produto criado com sucesso');
 
-           //return redirect ('/') -> with('msg', 'Produto criado com sucesso');
-//           return redirect('/', );
-//$message="Registered successfully";
-return redirect('/', );
-          //return redirect::to('/',compact('message'));
-           //return redirect('/',compact('message'));
+            return redirect('/', );
 
         }
 
@@ -133,7 +104,7 @@ return redirect('/', );
 
         }
 
-
+/*
       public function show($id){
        // $event = Event::all();//It has calling all events of database
 
@@ -157,7 +128,7 @@ return redirect('/', );
         }
 
 
-        //$events = Event::all();
+
         //It has finding  user first that can be find
         $eventOwer = User::where ('id', $event->user_id) -> first()->toArray(); //It has transforming object in array
         //return view('events.show',['event'=> $event]);
@@ -165,7 +136,7 @@ return redirect('/', );
 
 
         }
-
+*/
         public function dashboard(){
 
             $user = auth()->user();
@@ -182,12 +153,7 @@ return redirect('/', );
             $events = Event::all();//It has calling all events of database
 
 
-
-             //$eventOwer = User:: where ('id', $event -> user_id) -> first()->toArray();
-
-            // return view ('/events.show',['events'=> $events, 'eventOwer'=> $eventOwer]);
-
-                 return view ('/events.showcopy', ['event'=> $events]);
+            return view ('/events.showcopy', ['event'=> $events]);
 
                 }
                 //It has doing all event's edic
@@ -232,9 +198,9 @@ return redirect('/', );
                         $data ['image']=$imageName;//It has saving in Data Base
                     }
                     Event::findOrFail($request->id) ->update($data);
-                    session()->flash('msg', ' dados do Produto atualizados com sucesso !!');
+                    session()->flash('msg', ' Dados do Produto atualizados com sucesso !!');
 
-                    //return redirect('/dashboard')->with('msg', 'Evento editado com sucesso !!');
+
                     return redirect('/dashboard');
 
                 }
