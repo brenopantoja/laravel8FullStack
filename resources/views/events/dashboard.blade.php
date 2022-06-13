@@ -28,7 +28,6 @@
                     <th scop="col">Descrição </th>
                     <th scop="col"> Tensão </th>
                     <th scop="col">Marca</th>
-
                     <th scop="col">Data</th>
                     <th scop="col">Imagem</th>
                 </tr>
@@ -40,8 +39,8 @@
             <tr><div id="card col-md-3">
             <td scopt = "row"> {{$loop->index + 1}}</td>
             {{--<td> <a href="/events/{{$event->id}}"> {{$event->nome}}</a></td>--}}
-            <td>  {{$event->nome}}</a></td>
-            <td>  {{$event->descricao}}</a></td>
+            <td>{{$event->nome}}</a></td>
+            <td>{{$event->descricao}}</a></td>
             <td>{{$event->tensao}}</td>
             <td>{{$event->marca}}</td>
            {{-- <td>{{$event->date}}</td>--}}

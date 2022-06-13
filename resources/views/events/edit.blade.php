@@ -51,12 +51,10 @@
 
     <div>
 <label for = "title"> Descrição do produto </label>
-{{--<input type ="text" name= "faixa" id="faixa" class="form-control" value="{{$event->faixa}}"></input>--}}
 <input type="textarea"   type ="textarea" name= "descricao" id="descricao" class="form-control" value="{{$event->descricao}}"></textarea>
 
 
 <div class= "form - group"> </div>
-
 <label for = "tensao"> Tensão Elétrica do Produto </label>
 <input type ="text" name= "tensao" id="tensao" class="form-control" value="{{$event->tensao}}"></input>
 
@@ -64,7 +62,6 @@
 
 <div>
 <label for = "title"> Marca do Produto </label>
-{{--<input type ="text" name= "faixa" id="faixa" class="form-control" value="{{$event->faixa}}"></input>--}}
 <input type="textarea"   type ="textarea" name= "marca" id="marca" class="form-control" value="{{$event->marca}}"></textarea>
 
 

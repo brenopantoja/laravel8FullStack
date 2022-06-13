@@ -1,22 +1,29 @@
 Read me:
 
-It is a system made in Laravel Framework be able of managing music albums.
+It is a system made in Laravel Framework 8 be able of managing store: Electronic Products.
 
 Data Base has creating with name: pengenharia, if case change in file env.
 
 The system has all, login password and, it is able user to create a account (liveware).
 
- It has needing to acess the page: http://localhost:8000/register
+It has needing to acess the page: http://localhost:8000/register
 
 Firstly, it is required to access the page: And it does the register (login, password, email). After, just fill in the fields like:
 
-Total duration of the album Tracks and duration of each track Time Image
+Product name, description, voltage, mark, date of creation of the product, Image of the product.
 
-Also It has Creation, Read, Update, Delete (CRUD) tables and with join between them and bootstrap.
+Also It has Creation, Read, Update, Delete (CRUD) tables and with join between them, reactive, Java Script and bootstrap.
 
 
 Downloads: It does download of the Xampp, MySQL and of the Visual Studio Core.
 
+Use the commands:
+
+composer update
+
+php artisan migrate
+
+php artisan serve
 
 Join it!
 

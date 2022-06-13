@@ -40,7 +40,7 @@
 
 
 <div id="cards-containder" class="row">
-{{-- It has taking data of database (Column 'title' and description)   --}}
+{{-- It has taking data of database (Column 'name' and description)   --}}
 
  @foreach($event as $event)
     <div class="card col-md-3">
@@ -59,10 +59,10 @@
 
      @if (count([$event])!=0 && $search)
 
-    <p> Foi possivel encontrar um albúm com o título {{$search}}!!!!<a href="/"> Ver todos </a></p>
+    <p> Foi possivel encontrar um Produto com o título {{$search}}!!!!<a href="/"> Ver todos </a></p>
     @elseif (count([$event])==0 )
 
-    <p> Não existem Albúns disponíveis!!</p>
+    <p> Não existem Produtos disponíveis!!</p>
 
     @endif
 
