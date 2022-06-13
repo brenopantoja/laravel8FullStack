@@ -38,10 +38,9 @@ Route:: put('events/update/{id}',[EventController::class,'update']) ->middleware
 
 Return of datas:
 
-System has return all the products and It can delete, add or update all the data of products.
+System has return all the products datas and It can delete, add or update all the data of products.
 
-Messages are showing in screen.
-
+Messages of the sytem are showing in screen.
 
 
 Case need, it use the commands:
