@@ -37,7 +37,7 @@ class EventController extends Controller
      public function destroy($id)
      {
         Event:: findOrFail($id)-> delete();//It has deleting by the primary code
-        session()->flash('msg', ' Produto Excluído com  com sucesso !!');
+        session()->flash('msg', ' Produto Excluído  com sucesso !!');
 
         return redirect('/dashboard');
 

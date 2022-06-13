@@ -148,4 +148,5 @@ php artisan migrate
 
 php artisan migrate:status
 
- 
+//It has working with validate form on HTML
+php artisan make:request storeUserRequest 
