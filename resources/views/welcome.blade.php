@@ -40,10 +40,10 @@
 
  @foreach($event as $event)
     <div class="card col-md-3">
-    <img src="/img/events/{{$event-> image}}" alt="{{$event-> title}}"/>
+    <img src="/img/events/{{$event-> image}}" alt="{{$event-> nome}}"/>
     <div class="card-body">
     <p class= "card-date">{{date('d/m/y', strtotime($event->date)) }}</p>
-    <h5 class="card-title">  A Matrícula do Albúm:{{$event-> id}} <br>O Título do do Albúm: {{$event ->title}}</h5>
+    <h5 class="card-title">  A Matrícula do Produto:{{$event-> id}} <br>O Título do Produto: {{$event ->nome}}</h5>
   {{--  <a href="/events/{{$event->id}}" class="btn btn-primary">Clique para saber mais</a>--}}
 
     <a href="/events/edit/{{$event->id}}" class="btn btn-primary">Clique para saber mais</a>

@@ -6,7 +6,6 @@
 
 
 <h1> Esta é página registrar um eletrodoméstico </h1>
-<!--<img src="/img/background.png" alt="Banner"> -->
 
 
 <body>
@@ -20,7 +19,8 @@
 @dump($errors->has ('nome'), $errors->get('nome'))--}}
 
 
-<form action ="/event" method ="POST" enctype ="multipart/form-data" name="form1" id="form1"><form action ="/event" method ="POST" enctype ="multipart/form-data" name="form1" id="form1">
+<form action ="/event" method ="POST" enctype ="multipart/form-data" name="form1" id="form1">
+<!--<form action ="/event" method ="POST" enctype ="multipart/form-data" name="form1" id="form1"><form action ="/event" method ="POST" enctype ="multipart/form-data" name="form1" id="form1">-->
 @csrf {{--  diretive of the Laravel   --}}
 
 <div class="form-group">
@@ -31,11 +31,12 @@
 </div>
 
 
+
 <div class="form-group">
 
 <label for = "nome"> Nome do Produto: </label>
-<!--<input textarea = "text" class = "form-control " name ="nome" id="nome" placeholder ="Informe o Nome do Produto">-->
-<input textarea = "text" class = "form-control @if($errors->has('nome'))is-invalid @endif" name ="nome" id="nome" placeholder ="Informe o Nome do Produto">
+<input input = "text" class = "form-control " name ="nome" id="nome" placeholder ="Informe o Nome do Produto">
+<!--<input input = "text" class = "form-control @if($errors->has('nome'))is-invalid @endif" name ="nome" id="nome" placeholder ="Informe o Nome do Produto"> -->
 
 <!--<input textarea = "text" class = "form-control @if($errors->has('nome'))is-invalid @endif" name ="nome" id="nome" placeholder ="Informe o Nome do Produto">-->
         @if($errors->has('nome'))
@@ -44,16 +45,15 @@
 
     {{--$errors->get('nome')--}}
 
+
+
     @foreach($errors->get('nome') as $error)
 
         {{$error}}
-
-
     @endforeach
 
-
-
         @endif
+
 
     </div>
 

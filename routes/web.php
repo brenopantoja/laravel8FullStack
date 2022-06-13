@@ -42,9 +42,6 @@ Route:: get('/events/edit/{id}',[EventController::class,'edit'])->middleware('au
 Route:: put('events/update/{id}',[EventController::class,'update']) ->middleware('auth');
 
 
-//It has deleting events
-Route:: delete('events/leave/{id}',[EventController::class,'leaveEvent']) ->middleware('auth');
-
 
     /*
 

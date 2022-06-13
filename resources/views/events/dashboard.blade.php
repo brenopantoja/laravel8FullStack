@@ -5,7 +5,7 @@
     <br>
 <div class ="col-md-10 offset-md-1">
 
-    <h2> Meus Albúm:</h2>
+    <h2> Meus Produtos:</h2>
 
 </div>
 
@@ -18,16 +18,6 @@
 
             <thead>
                 <tr>
-                    <!--
-                    <th scop="col">#</th>
-                    <th scop="col">Nome do Albúm</th>
-                    <th scop="col">Duração total do Albúm </th>
-                    <th scop="col"> Faixas e Duração de cada Faixa </th>
-                    <th scop="col">Hora</th>
-
-
-                    <th scop="col">Imagem</th>
--->
 
 <th scop="col">#</th>
                     <th scop="col">Nome</th>
@@ -35,7 +25,7 @@
                     <th scop="col"> Tensão </th>
                     <th scop="col">Marca</th>
 
-
+                    <th scop="col">Data</th>
                     <th scop="col">Imagem</th>
                 </tr>
 
@@ -52,9 +42,9 @@
             <td>{{$event->tensao}}</td>
             <td>{{$event->marca}}</td>
            {{-- <td>{{$event->date}}</td>--}}
-            <td>{{$event->created_at}}</td>
-
-            <td><img src="/img/events/{{$event   -> image}}"/></td>
+            {{--<td>{{$event->created_at}}</td>--}}
+        <td>   {{ date('Y-m-d', strtotime($event->created_at))}}</td>
+            <td><img src="/img/events/{{$event   -> image}} " width= "150" heigth= "100"/></td>
 
             <td><a href="/events/edit/{{$event->id}}" class="btn btn-primary"> <ion-icon name="create-outline"></icon-icon>Editar </a> </td>
                 <form action ="/events/{{$event->id}}" method="POST">
@@ -108,7 +98,6 @@
 
 
 
-    <a href="/" classe="nav-link"> Voltar para Página Inicial</a><br>
 
     {{-- It has taking data of database (Column 'title' and description)   --}}
 

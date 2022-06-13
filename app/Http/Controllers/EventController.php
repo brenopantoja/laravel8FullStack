@@ -17,7 +17,7 @@ class EventController extends Controller
         $search = request('search');
         if($search){
             $event =  Event:: where([
-            ['title', 'like', '%'.$search.'%' ]
+            ['nome', 'like', '%'.$search.'%' ]
 
             ]) ->get() ;
 
@@ -53,7 +53,9 @@ class EventController extends Controller
             $event -> nome =$request->nome;
 
             $event -> descricao = $request -> descricao;
+
             $event -> tensao = $request ->tensao;
+
             $event -> marca = $request ->marca;
             $event -> date = $request ->date;
 
@@ -140,19 +142,6 @@ class EventController extends Controller
 
 
         }
-        public function joinEvent($id){
-            //Auth has been logged
-            $user = auth()->user();
-
-            $user->eventsAsParticipant()->attach($id);// It has saving the user at event
-
-
-            $event= Event:: findOrFail($id);
-
-            return redirect('/dashboard')->with ('mgs', 'Sua presença está confirmada no evento'.$event->title);
-
-
-        }
               public function showAll(){
             $events = Event::all();//It has calling all events of database
 
@@ -212,17 +201,5 @@ class EventController extends Controller
 
                 }
 
-
-                public function leaveEvent($id){
-                    $user = auth()->user();
-                    // It has deleting the link
-                    $user ->eventsAsParticipant()->detach($id);
-
-                    $event= Event::findOrFail($id);
-                    //It has returning the page dashboard
-                    return redirect('/dashboard')-> with('msg', 'Você saiu com sucesso do evento:' .$event->title);
-
-
-                }
 
 }

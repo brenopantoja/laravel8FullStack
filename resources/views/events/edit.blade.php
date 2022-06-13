@@ -37,7 +37,7 @@
 <div class= "form - group"> </div>
 
 <label for = "date"> Data da Criação do Produto </label>
-<input  type = "date" class = "form-control " name="date" id="date"  value="{{   date('Y-m-d', strtotime($event->date)) }}" >
+<input  type = "date" class = "form-control " name="created_at" id="created_att"  value="{{   date('Y-m-d', strtotime($event->date)) }}" >
 </div>
 
 <br>

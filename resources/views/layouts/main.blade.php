@@ -4,7 +4,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <title> @yield('title')</title>
     <div id="search-container" class="col-md-12" >
-  <!--  <img src="/img/background.png" alt="João Carreiro" style="float:right;width:200px"> -->
+
 <style>
     body{
 
@@ -29,7 +29,7 @@ background-attachment: fixed;
 
 <div class= "collapse navbar-collapse"  id="navbar">
     <a href="" class="navbar-brand">
-<!--<img src="/img/logo.png" alt="João Carreiro" -->
+<img src="/img/logo.png" alt="P. Engenharia"  width= "150" heigth= "100">
     </a>
     @guest
     <lu class="nav-item">
