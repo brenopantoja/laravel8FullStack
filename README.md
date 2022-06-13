@@ -22,13 +22,19 @@ API has 4 pages, where it is able look for product by the name or type.
 Routes:
 
 //It has creating products
+
 Route:: get ('/events/create', [EventController::class, 'create']) ->middleware('auth');
+
 //It has creating products
+
 Route:: post ('/event', [EventController::class, 'store']) ->middleware('auth');
 
  //It has showing products of the user
+ 
 Route:: get('dashboard',[EventController::class,'dashboard'])->middleware('auth') ;
+
 //It has delete products
+
 Route:: delete ('/events/{id}', [EventController::class, 'destroy'])->middleware('auth') ;
 
 //It has updating data base
