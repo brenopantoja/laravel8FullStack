@@ -6,11 +6,11 @@ use Illuminate\Http\Request;
 use App\Models\Event;
 use App\Models\User;
 
+
 class EventController extends Controller
 
 {
     //
-     //
      public function index(){
 
         //It has doing the search in Data Base
@@ -39,13 +39,28 @@ class EventController extends Controller
      public function destroy($id)
      {
         Event:: findOrFail($id)-> delete();//It has deleting by the primary code
+        session()->flash('msg', '  Produto Excluído com atualizados com sucesso !!');
 
-        return redirect('/dashboard')-> with ('msg', 'Evento excluido com sucesso');
+        return redirect('/dashboard');
+       // return redirect('/dashboard')-> with ('msg', 'Evento excluido com sucesso');
+
      }
 
-        public function store( Request $request){
-            $event = new Event;
+
+       // public function store( StoreUserResquest $request2,Request $request ){
+
+            public function store( Request $request){
                 /*
+            $request->validate([
+                'nome' => 'required|unique:event|max:255',
+                'descricao'=> 'required|unique:event|max:255 ',
+                'tensao'=> 'required|unique:event|max:255 ',
+                'marca'=> 'required|unique:event|max:255 ',
+                          'date' => 'nullable|date',
+
+            ]);*/
+            $event = new Event;
+            /*
             $table -> string ("nome");
             $table -> string ("descricao") ;
             $table -> string("tensao ");
@@ -83,12 +98,33 @@ class EventController extends Controller
             // It has taking the login user of the data base
             $user= auth()->user();
             $event-> user_id = $user->id;
-
             $event -> save();
+            /*
+            $request->validate([
+                'nome' => 'required|unique:event|max:255',
+                'descricao'=> 'required|unique:event|max:255 ',
+                'tensao'=> 'required|unique:event|max:255 ',
+                'marca'=> 'required|unique:event|max:255 ',
+                          'date' => 'nullable|date',
+
+            ]);
+
+
+*/
 
             //return redirect ('/');
+            //Event::create(['nome' => $nome, 'descricao' => $descricao,'tensao' => $tensao, 'marca' =>$marca, 'image'=> $image]);
             // For It has creating msg to user
-            return redirect ('/') -> with('msg', 'Evento criado com sucesso');
+
+            session()->flash('msg', 'Produto criado com sucesso');
+
+           //return redirect ('/') -> with('msg', 'Produto criado com sucesso');
+//           return redirect('/', );
+//$message="Registered successfully";
+return redirect('/', );
+          //return redirect::to('/',compact('message'));
+           //return redirect('/',compact('message'));
+
         }
 
 
@@ -165,6 +201,7 @@ class EventController extends Controller
                     //It has checking if user can use or to see event
                     if($user->id != $event->user_id){
 
+
                         return redirect('/dashboard');
                     }
 
@@ -195,9 +232,10 @@ class EventController extends Controller
                         $data ['image']=$imageName;//It has saving in Data Base
                     }
                     Event::findOrFail($request->id) ->update($data);
+                    session()->flash('msg', ' dados do Produto atualizados com sucesso !!');
 
-
-                    return redirect('/dashboard')->with('msg', 'Evento editado com sucesso !!');
+                    //return redirect('/dashboard')->with('msg', 'Evento editado com sucesso !!');
+                    return redirect('/dashboard');
 
                 }
 

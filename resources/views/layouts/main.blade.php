@@ -5,15 +5,7 @@
     <title> @yield('title')</title>
     <div id="search-container" class="col-md-12" >
 
-<style>
-    body{
 
-/*background-image: url("/img/background.png");*/
-background-repeat: no-repeat;
-background-attachment: fixed;
-
-}
-</style>
 
     {{-- CSS --}}
     <script> src="/js/script.js"</script>

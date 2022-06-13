@@ -3,14 +3,16 @@
 @section('content')
 
 <div id="event-create-container" class="col-md-6 offset-md-3">
+<meta name="csrf-token" content="{{ csrf_token() }}">
 
 <h1> Editando: {{$event->nome}}</h1>
+@if(session ('msg'))
+<div class  ="alert alert-success">
+    <p>{{session('msg')}}</p>
+@endif
 
 <h1> Edite o seu Produto </h1>
 <br>
-@if(session ('msg'))
-<p class ="msg">{{session('msg')}}</p>
-@endif
 
 <form action ="/events/update/{{$event->id}}" method ="POST" enctype ="multipart/form-data">
 @csrf {{--  diretive of the Laravel   --}}

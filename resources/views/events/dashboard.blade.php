@@ -4,7 +4,11 @@
 
     <br>
 <div class ="col-md-10 offset-md-1">
-
+<meta name="csrf-token" content="{{ csrf_token() }}">
+@if(session ('msg'))
+<div class="alert alert-success">
+   <p> {{session('msg')}}</p>
+@endif
     <h2> Meus Produtos:</h2>
 
 </div>

@@ -3,6 +3,12 @@
 @section ('content')
 <hmtl>
 <div id="event-create-container" class="col-md-6 offset-md-3">
+<meta name="csrf-token" content="{{ csrf_token() }}">
+@if(session ('msg'))
+<div class="alert alert-success">
+   <p> {{session('msg')}}</p>
+@endif
+
 
 
 <h1> Esta é página registrar um eletrodoméstico </h1>
@@ -11,55 +17,59 @@
 <body>
 <header>
 <br>
-@if(session ('msg'))
-<p class ="msg">{{session('msg')}}</p>
-@endif
+
 
 {{--@dd($error->has ('nome'))
 @dump($errors->has ('nome'), $errors->get('nome'))--}}
+{{--$errors->get('nome')
 
 
-<form action ="/event" method ="POST" enctype ="multipart/form-data" name="form1" id="form1">
+{{dd($errors,$errors->any(),$errors->all())}}
+--}}   @if ($errors->any())
+
+<div class="alert alert-danger">
+
+    <ul>
+
+        @foreach ($errors->all() as $error)
+
+            <li>{{ $error }}</li>
+
+        @endforeach
+
+    </ul>
+
+</div>
+
+@endif
+
+<form action ="/event" method ="POST" enctype ="multipart/form-data" name="form1"  class="form-horizontal validate-form">
 <!--<form action ="/event" method ="POST" enctype ="multipart/form-data" name="form1" id="form1"><form action ="/event" method ="POST" enctype ="multipart/form-data" name="form1" id="form1">-->
 @csrf {{--  diretive of the Laravel   --}}
+
+
+<label for = "nome"> Nome do Produto: </label>
+<!--<input input = "text" class = "form-control " name ="nome" id="nome" placeholder ="Informe o Nome do Produto">-->
+<input input = "text"  name ="nome" id="nome" value="{{ old('nome') }}" placeholder ="Informe o Nome do Produto" class = "form-control  ">
+<!--<input textarea = "text" class = "form-control @if($errors->has('nome'))is-invalid @endif" name ="nome" id="nome" placeholder ="Informe o Nome do Produto">
+
+<input id="title" type="text" class="form-control" name="title" value="{{ old('title') }}"/>
+-->
+</div>
+
+<br>
 
 <div class="form-group">
 
 <label for = "image"> Imagem do Produto: </label>
 {{--   It is be able to creat file in html enctype ="multipart/form-data"   --}}
-<input type = "file" name ="image" id= "image" class = "form-control -file" >
+<input type = "file" name ="image" id= "image" class = "form-control -file" value="{{old('image')}}" >
 </div>
 
 
 
 <div class="form-group">
 
-<label for = "nome"> Nome do Produto: </label>
-<input input = "text" class = "form-control " name ="nome" id="nome" placeholder ="Informe o Nome do Produto">
-<!--<input input = "text" class = "form-control @if($errors->has('nome'))is-invalid @endif" name ="nome" id="nome" placeholder ="Informe o Nome do Produto"> -->
-
-<!--<input textarea = "text" class = "form-control @if($errors->has('nome'))is-invalid @endif" name ="nome" id="nome" placeholder ="Informe o Nome do Produto">-->
-        @if($errors->has('nome'))
-
-    <div class="invalid-feedback">
-
-    {{--$errors->get('nome')--}}
-
-
-
-    @foreach($errors->get('nome') as $error)
-
-        {{$error}}
-    @endforeach
-
-        @endif
-
-
-    </div>
-
-</div>
-
-<br>
 
 <div class="form-group">
 

@@ -6,6 +6,10 @@
 <html>
     <title> P. Engenharia</title>
     <body>
+    @if(session ('msg'))
+<div class  ="alert alert-success"><p>{{session('msg')}}</p>
+@endif
+
 
 
 <div class="search-container">
@@ -27,11 +31,11 @@
 
 @else
 
-<h1> Albúns:</h1>
+<h1> Produtos:</h1>
 @endif
 
 </div>
-    <p class="subtitle"> Clique aqui e veja os Albúns</p>
+    <p class="subtitle"> Clique aqui e veja os Produtos</p>
 
 
 
