@@ -12,7 +12,7 @@ Firstly, it is required to access the page: And it does the register (login, pas
 
 Product name, description, voltage, mark, date of creation of the product, Image of the product.
 
-Also It has Creation, Read, Update, Delete (CRUD) tables and with join between them, reactive, Java Script and bootstrap.
+Also It has Creation, Read, Update, Delete (CRUD) tables and with join between them, session, Java Script and bootstrap.
 
 
 Downloads: It does download of the Xampp, MySQL and of the Visual Studio Core.
